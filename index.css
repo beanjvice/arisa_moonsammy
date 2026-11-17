@@ -169,11 +169,16 @@ nav {
 .scroll-indicator i {
     font-size : 32px;
     color : #b24d37;
-    transition : transform 0.2s ease;
+    animation : arrowBounce 2s ease-in-out infinite;
 }
 
-.scroll-indicator:hover i {
-    transform : translateY(5px);
+@keyframes arrowBounce {
+    0%, 100% {
+        trasnform : translateY(0);
+    }
+    50% {
+        transform : translateY(8px);
+    }
 }
 
 /*general sections*/
