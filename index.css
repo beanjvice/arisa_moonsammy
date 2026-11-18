@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior : smooth; 
+    scroll-padding-top : 68px;
 }
 
 body {
@@ -18,8 +19,28 @@ body {
 
 /*navigation*/
 header {
+    position : sticky;
+    top : 0;
+    z-index : 1000;
     background-color : #FFEEB0;
     padding : 18px 0;
+    transition : background-color 0.4s ease;
+}
+
+header.about-active {
+    background-color : #482420;
+}
+
+.nav-name, 
+.nav-links a,
+.nav-right a {
+    transition : color 0.4s ease;
+}
+
+header.about-active .nav-name,
+header.about-active .nav-links a, 
+header.about-active .nav-right a {
+    color : #FFEEB0;
 }
 
 nav {
@@ -28,7 +49,6 @@ nav {
     align-items : center;
     width : 100%;
     padding : 0 40px;
-    background-color : #FFEEB0;
 }
 
 .nav-left {
@@ -93,7 +113,7 @@ nav {
     justify-content : flex-start;
     align-items : center;
     width : 100%;
-    height : calc(100svh - 73px);
+    height : calc(100svh - 70px);
     box-sizing : border-box;
 
     padding : 40px 8% 100px 18%;
@@ -191,7 +211,7 @@ nav {
 
 @keyframes arrowBounce {
     0%, 100% {
-        trasnform : translateY(0);
+        transform : translateY(0);
     }
     50% {
         transform : translateY(8px);
@@ -212,6 +232,58 @@ section h2 {
 #about p {
     max-width : 700px;
     margin : auto;
+}
+
+/*about*/
+#about {
+    background-color : #FFEEB0;
+    min-height : 80vh;
+    display : flex;
+    justify-content : flex-end;
+    align-items : center;
+    padding : 80px 10% 80px 10%;
+    box-sizing : border-box;
+    /* border-top: 3px solid #FFEEB0; */
+
+}
+
+.about-content {
+    width : 42%;
+    color : #482420;
+}
+
+.about-heading-row {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    gap : 16px;
+    margin-bottom : 35px;
+}
+
+.about-line {
+    display : inline-block;
+    width : 170px;
+    height : 2px;
+    background-color : #B85039;
+}
+
+#about h2 {
+    font-size : 44px;
+    font-weight : 500;
+    color : #482420;
+    margin : 0;
+}
+
+.about-text {
+    text-align : center;
+}
+
+.about-text p {
+    font-size : 22px;
+    line-height : 1.45;
+    font-weight : 400;
+    color : #482420;
+    margin : 0 0 28px 0;
 }
 
 /*skills*/
@@ -308,5 +380,33 @@ footer {
 
     .hero p {
         font-size : 18px;
+    }
+
+    #about {
+        justify-content : center;
+        padding : 70px 8%;
+        min-height : auto;
+    }
+
+    .about-content {
+        width : 100%;
+    }
+
+    .about-heading-row {
+        gap : 12px;
+        margin-bottom : 28px;
+    }
+
+    .about-line {
+        width : 90px;
+    }
+
+    #about h2 {
+        font-size : 34px;
+    }
+
+    .about-text p {
+        font-size : 18px;
+        line-height : 1.5;
     }
 }
