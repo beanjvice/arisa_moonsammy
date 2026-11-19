@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateNavbar();
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const polaroidImage = document.getElementById("polaroid-image");
     const polaroidCaption = document.getElementById("polaroid-caption");
@@ -36,20 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (polaroidImage && polaroidCaption) {
         const polaroidPhotos = [
             {
-                src: "images/test_img1.png",
-                caption: "a little piece of my life ♡"
+                src: "images/img_one.jpeg",
+                caption: "arisa ♡"
             },
             {
-                src: "images/test_img2.png",
-                caption: "little moments I love"
+                src: "images/img_two.jpeg",
+                caption: "city ♡"
             },
             {
-                src: "images/test_img3.png",
-                caption: "me outside of coding"
+                src: "images/img_three.jpeg",
+                caption: "emi ♡"
             },
             {
-                src: "images/test_img4.png",
-                caption: "memories that make me smile"
+                src: "images/img_four.jpeg",
+                caption: "networking event ♡"
             }
         ];
 
@@ -73,4 +74,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setInterval(changePolaroidPhoto, 4000);
     }
+});
+
+
+
+/* Expandable Experience Cards */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const experienceButtons =
+        document.querySelectorAll(".experience-toggle");
+
+    experienceButtons.forEach((button) => {
+
+        button.addEventListener("click", function () {
+
+            const isExpanded =
+                button.getAttribute("aria-expanded") === "true";
+
+            // Close all experience cards
+            experienceButtons.forEach((otherButton) => {
+                otherButton.setAttribute("aria-expanded", "false");
+            });
+
+            // Open selected card if it was closed
+            if (!isExpanded) {
+                button.setAttribute("aria-expanded", "true");
+            }
+
+        });
+
+    });
+
 });

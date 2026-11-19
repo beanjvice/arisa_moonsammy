@@ -56,6 +56,8 @@
             </nav>
         </header>
 
+
+
 <!--home-->
         <section id = "home" class = "hero">
             <div class = "hero-content">
@@ -71,14 +73,16 @@
 
         </section>
 
+
+
 <!--about-->
         <section id = "about">
             <div class = "about-wrapper">
 
                 <div class = "about-polaroid-area">
                     <div class = "polaroid">
-                        <img id = "polaroid-image" src = "images/test_img1.png" alt = "test image one">
-                        <p id = "polaroid-caption"> a little piece of my life ♡</p>
+                        <img id = "polaroid-image" src = "images/img_one.jpeg" alt = "test image one">
+                        <p id = "polaroid-caption">arisa ♡</p>
                     </div>
                 </div>
 
@@ -103,6 +107,8 @@
 
             </div>
         </section>
+
+
 
 <!--experience-->
 <section id = "experience">
@@ -133,39 +139,106 @@
                     <span>SQL</span>
                 </div>
             </div>
-            
+
         </div>
+
+
         
         <div class = "experience-right">
             <div class = "experience-timeline">
-<!--techstars-->
-                <div class = "experience-item">
-                    <div class = "experience-dot"></div>
-                    <div class = "experience-card">
-                        <p class = "experience-date">June - August 2026</p>
-                        <h3>Software Engineering Intern</h3>
-                        <p class = "experience-company">
-                            Techstars Anywhere Accelerator
-                        </p>
-                    </div>
-                </div>
-
 <!--peer mentor-->
                 <div class = "experience-item">
                     <div class = "experience-dot"></div>
                     <div class = "experience-card">
-                        <p class = "experience-date">Fall 2026 - Present</p>
-                        <h3>Computer Information Systems Peer Mentor</h3>
-                        <p class = "experience-company">
-                            CUNY New York City College of Technology
-                        </p>
+                        <button class = "experience-toggle"
+                            type = "button"
+                            aria-expanded = "false"
+                            aria-controls = "mentor-details">
+
+                            <span class = "experience-date">
+                                Fall 2026 - Present
+                            </span>
+                            <span class = "experience-role">
+                                Computer Information Systems Peer Mentor
+                            </span>
+                            <span class = "experience-company">
+                                CUNY New York City College of Technology
+                            </span>
+                            <i class = "fa-solid fa-chevron-down experience-arrow"
+                                aria-hidden = "true"></i>
+                    </button>
+
+                        <div class = "experience-details"
+                            id = "mentor-details">
+                            <ul>
+                                <li>
+                                    Support students with academic planning, 
+                                    course registration, and study strategies.
+                                </li>
+                                <li>
+                                    Connect students with tutoring, campus 
+                                    resources, and career development support.
+                                </li>
+                                <li>
+                                    Provide individualized mentoring and 
+                                    follow-ups throughout the semester.
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
+
+<!--techstars-->
+                <div class = "experience-item">
+                    <div class = "experience-dot"></div>
+                        
+                        <div class = "experience-card">
+                            <button class = "experience-toggle"
+                                type = "button"
+                                aria-expanded = "false"
+                                aria-controls = "techstars-details">
+                        
+                            <span class = "experience-date">
+                                June - August 2026
+                            </span>
+                            <span class = "experience-role">
+                                Software Engineering Intern
+                            </span>
+                            <span class = "experience-company">
+                                Techstars Anywhere Accelerator
+                            </span>
+                            <i class = "fa-solid fa-chevron-down experience-arrow"
+                                aria-hidden = "true"></i>
+                        </button>
+
+                        <div class = "experience-details"
+                            id = "techstars-details">
+                            <ul>
+                                <li>
+                                    Automated investor relationship workflows 
+                                    using Node.js, REST APIs, and Airtable.
+                                </li>
+                                <li>
+                                    Processed and organized 300+ founder-investor
+                                    introductions.
+                                </li>
+                                <li>
+                                    Built an Airtable interface to help teams 
+                                    explore investor relationships.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
-
     </div>
 </section>
+
+
 
 <!--projects-->
         <section id = "projects">
@@ -194,6 +267,8 @@
                 </div>
             </div>
         </section>
+
+
 
 <!--contact-->
         <section id = "contact">
