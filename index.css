@@ -43,6 +43,17 @@ header.about-active .nav-right a {
     color : #FFEEB0;
 }
 
+header.about-active .nav-links a:hover, 
+header.about-active .nav-right a:hover {
+    color : #B85039;
+}
+
+header.about-active .nav-links a:focus-visible,
+header.about-active .nav-right a:focus-visible {
+    color: #B85039;
+    outline-color: #FFEEB0;
+}
+
 nav {
     display : flex;
     justify-content : space-between;
@@ -106,7 +117,6 @@ nav {
 }
 
 /*home*/
-
 .hero {
     position : relative;
     display : flex;
@@ -348,6 +358,145 @@ section h2 {
     font-weight : 500;
 }
 
+/*experience*/
+#experience {
+    background-color : #482420;
+    color : #FFEEB0;
+    padding : 100px 10%;
+    min-height : 80vh;
+}
+
+.experience-wrapper {
+    width : 100%;
+    max-width : 1250px;
+    margin : 0 auto;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    gap : 80px;
+}
+.experience-left {
+    width : 45%;
+    text-align : left;
+}
+
+.experience-right {
+    width : 55%;
+}
+
+.experience-heading-row {
+    display : flex;
+    align-items : center;
+    justify-content : flex-start;
+    gap : 16px;
+    margin-bottom : 20px;
+}
+
+.experience-line {
+    display : inline-block;
+    width : 170px;
+    height : 2px;
+    background-color : #B85039;
+}
+
+#experience h2 {
+    font-size : 44px;
+    font-weight :  500;
+    margin : 0;
+}
+
+.experience-subtitle {
+    font-size : 20px;
+    color : #E8CDB4;
+    text-align : left;
+    margin-bottom : 55px;
+}
+
+.experience-tools {
+    margin-top : 55px;
+}
+
+.experience-tools h3 {
+    font-size : 22px;
+    font-weight : 500;
+    color : #FFEEB0;
+    margin-bottom : 20px;
+}
+
+.tools-list {
+    display : flex;
+    flex-wrap : wrap;
+    gap : 12px;
+}
+
+.tools-list span {
+    display : inline-block;
+    padding : 8px 16px; 
+    border : 1px solid #b85039;
+    border-radius : 25px;
+    color : #FFEEB0;
+    font-size : 15px;
+    font-weight : 400;
+}
+
+.experience-timeline {
+    position : relative;
+    width : 100%;
+    margin : 0 auto;
+    padding-left : 35px;
+    text-align : left; 
+}
+
+.experience-timeline::before {
+    content : "";
+    position : absolute;
+    top : 10px;
+    bottom : 40px;
+    left : 5px;
+    width : 2px;
+    background-color : #986452;
+}
+
+.experience-item {
+    position : relative;
+    margin-bottom : 30px;
+}
+
+.experience-dot {
+    position : absolute;
+    left : -35px;
+    top : 22px;
+    width : 12px;
+    height : 12px;
+    background-color : #B85039;
+    border-radius : 50%;
+}
+
+.experience-card {
+    background-color : #563029;
+    border-radius : 12px;
+    padding : 25px 30px;
+    text-align : left;
+}
+
+.experience-date {
+    font-size : 15px;
+    color : #e4a48a;
+    margin-bottom : 10px;
+}
+
+.experience-card h3 {
+    font-size : 24px;
+    font-weight : 500;
+    color : #FFEEB0;
+    margin-bottom : 5px;
+}
+
+.experience-company {
+    font-size : 18px;
+    color : #E8CDB4;
+}
+
 
 /*projects*/
 .project-container {
@@ -457,5 +606,45 @@ footer {
     .about-text p {
         font-size : 18px;
         line-height : 1.5;
+    }
+    
+    #experience {
+    padding: 70px 8%;
+    }
+
+    .experience-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+    }
+
+    .experience-left,
+    .experience-right {
+    width: 100%;
+    }
+
+    .experience-line {
+    width: 70px;
+    }
+
+    #experience h2 {
+    font-size: 34px;
+    }
+
+    .experience-subtitle {
+    font-size: 18px;
+    }
+
+    .experience-tools {
+    margin-top: 35px;
+    }
+
+    .tools-list span {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+    .experience-card {
+        padding: 20px;
     }
 }
